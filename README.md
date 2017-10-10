@@ -1,3 +1,12 @@
+# Instructions to Run
+#### Requirements:
+* `yarn` or `npm`
+
+#### Commands
+
+* `yarn start` or `npm run start`
+
+
 # Notes
 
 In the essence of not going too far past the 3-4 recommended hours on this. The following is the two items I didn't get to but notes on my thoughts once I would get to them.  (If requested I could update this once I return.)
