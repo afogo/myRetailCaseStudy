@@ -1,0 +1,37 @@
+.quantity-selector {
+  align-items: center;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  width: 240px;
+}
+
+.quantity-selector__controls {
+  display: flex;
+  align-items: center;
+}
+
+.amount {
+  margin: 0 12px;
+}
+
+.increment,
+.decrement {
+  background: none;
+  border: none;
+  color: #CCCCCC;
+  cursor: pointer;
+  font-size: 36px;
+  outline: inherit;
+  padding: 0;
+  transition: color 200ms ease;
+}
+
+.increment:hover,
+.increment:focus,
+.decrement:hover,
+.decrement:focus {
+  color: #666666;
+}

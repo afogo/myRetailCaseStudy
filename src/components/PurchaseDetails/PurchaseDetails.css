@@ -1,0 +1,15 @@
+.product-price {
+  padding: 24px;
+}
+
+.product-price__formatted-price {
+  font-family: Arial;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.product-price__qualifier {
+  margin-left: 6px;
+  color: #666666;
+  text-transform: lowercase;
+}

@@ -1,0 +1,16 @@
+.promotions {
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  padding: 24px;
+}
+
+.promo {
+  color: #CC0000;
+  font-family: Arial;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.promo__text {
+  margin-left: 6px;
+}
