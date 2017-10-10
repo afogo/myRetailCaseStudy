@@ -78,11 +78,7 @@ class Carousel extends Component {
 }
 
 Carousel.propTypes = {
-  imageList: PropTypes.array,
-};
-
-Carousel.defaultProps = {
-  imageList: [],
+  imageList: PropTypes.array.isRequired,
 };
 
 export default Carousel;

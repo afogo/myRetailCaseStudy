@@ -1,0 +1,12 @@
+.save-product {
+  display: flex;
+  margin: 0 24px;
+}
+.save-product .button-container {
+  flex: 1 1 150px;
+  margin-right: 6px;
+}
+
+.save-product .button-container:last-child {
+  margin-right: 0;
+}

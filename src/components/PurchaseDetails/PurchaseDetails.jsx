@@ -6,6 +6,8 @@ import Quantity from '../Quantity';
 
 import PurchaseButtons from '../PurchaseButtons';
 import ReturnPolicy from '../ReturnPolicy';
+import SaveProduct from '../SaveProduct';
+import ProductHighlights from '../ProductHighlights';
 
 const PurchaseDetails = (props) => {
   const {
@@ -23,6 +25,8 @@ const PurchaseDetails = (props) => {
       <Quantity />
       <PurchaseButtons />
       <ReturnPolicy />
+      <SaveProduct />
+      <ProductHighlights />
     </div>
   );
 };

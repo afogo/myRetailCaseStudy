@@ -4,3 +4,4 @@ export const getAlternateImages = state => getProduct(state).Images[0].Alternate
 export const getOfferPrice = state => getProduct(state).Offers[0].OfferPrice[0];
 export const getPromotions = state => getProduct(state).Promotions;
 export const getPurchasingChannelCode = state => getProduct(state).purchasingChannelCode;
+export const getProductHighlights = state => getProduct(state).ItemDescription[0].features;

@@ -1,7 +1,12 @@
 .purchase-buttons {
   padding: 0 0 24px 24px;
 }
-
-.purchase-buttons .purchase-button {
+.purchase-buttons .button-container {
+  display: inline-block;
   margin-right: 12px;
+  width: 240px;
+}
+
+.purchase-buttons .button-container:last-child {
+  margin-right: 0;
 }

@@ -11,11 +11,15 @@ const PurchaseButtons = (props) => {
   return (
     <div className="purchase-buttons">
       {purchasingChannelCode === '0' || purchasingChannelCode === '2' ?
-        <Button>PICK UP IN STORE</Button>
+        <div className="button-container">
+          <Button>PICK UP IN STORE</Button>
+        </div>
         : null
       }
       {purchasingChannelCode === '0' || purchasingChannelCode === '1' ?
-        <Button primary>ADD TO CART</Button>
+        <div className="button-container">
+          <Button primary>ADD TO CART</Button>
+        </div>
         : null
       }
     </div>

@@ -11,11 +11,15 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <div className="product-title">
-        <h1>${productName}</h1>
+      <div className="section">
+        <div className="product-title">
+          <h1>{productName}</h1>
+        </div>
+        <Carousel />
       </div>
-      <Carousel />
-      <PurchaseDetails />
+      <div className="section">
+        <PurchaseDetails />
+      </div>
     </div>
   );
 };

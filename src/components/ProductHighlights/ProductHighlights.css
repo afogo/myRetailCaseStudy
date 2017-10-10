@@ -1,0 +1,14 @@
+.highlights .title {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 24px;
+}
+
+.highlights ul {
+  color: #666666;
+  font-size: 14px;
+}
+
+.highlights ul > li {
+  margin-bottom: 6px
+}

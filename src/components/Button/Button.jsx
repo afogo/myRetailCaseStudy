@@ -6,11 +6,12 @@ const Button = (props) => {
   const {
     children,
     primary,
+    flat,
   } = props;
 
   return (
     <button
-      className={`purchase-button ${primary ? 'primary' : ''}`}
+      className={`purchase-button ${primary ? 'primary' : ''} ${flat ? 'flat' : ''}`}
     >
       {children}
     </button>
@@ -19,11 +20,13 @@ const Button = (props) => {
 
 Button.propTypes = {
   children: PropTypes.node,
+  flat: PropTypes.bool,
   primary: PropTypes.bool,
 };
 
 Button.defaultProps = {
   children: null,
+  flat: false,
   primary: false,
 };
 

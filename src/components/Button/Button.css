@@ -19,7 +19,7 @@
   font-weight: 300;
   outline: inherit;
   padding: 12px 0;
-  width: 240px;
+  width: 100%;
 }
 
 .purchase-button.primary {
@@ -30,4 +30,18 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#cc2222',GradientType=0 );
 
   border-color: #cc0000
+}
+
+.purchase-button.flat {
+  background: #f3f3f3;
+  border-color: #f3f3f3;
+  box-shadow: none;
+  color: #333333;
+  font-size: 12px;
+  padding: 6px;
+  transition: background 200ms ease;
+}
+
+.purchase-button.flat:hover {
+  background: #cccccc;
 }
