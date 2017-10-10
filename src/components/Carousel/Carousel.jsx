@@ -1,17 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import './Carousel.css';
+import './Carousel.css';
 
 class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
       highlightedImage: props.imageList[0].image,
+      spinnerPosition: 0,
     };
   }
 
-  componentWillReceiveProps() {
-    console.warn('foo');
+  setHighlightedImage(imagePath) {
+    this.setState(() => ({ highlightedImage: imagePath }));
+  }
+
+  slideRight() {
+    const maxSlide = -(this.props.imageList.length * 74) + 222;
+
+    if (this.state.spinnerPosition > maxSlide) {
+      this.setState(prevState => ({ spinnerPosition: prevState.spinnerPosition - 74 }));
+    }
+  }
+
+  slideLeft() {
+    if (this.state.spinnerPosition < 0) {
+      this.setState(prevState => ({ spinnerPosition: prevState.spinnerPosition + 74 }));
+    }
   }
 
   render() {
@@ -24,20 +39,36 @@ class Carousel extends Component {
         <div className="carousel__highlight">
           <img src={this.state.highlightedImage} alt="" />
         </div>
-        <div className="spinner">
-          <div className="spinner__arrow spinner__arrow--left">
+        <div className="carousel__controls">
+          <div
+            className={`arrow arrow--left ${this.state.spinnerPosition >= 0 ? 'hidden' : ''}`}
+            onClick={() => this.slideLeft()}
+          >
             <span>&lsaquo;</span>
           </div>
-          {imageList.map(imageObj => (
-            <img
-              // alt tags should be defined
-              alt=""
-              className={`spinner__image ${this.state.highlightedImage === imageObj.image ? 'selected' : ''}`}
-              key={imageObj.image}
-              src={imageObj.image}
-            />
-          ))}
-          <div className="spinner__arrow spinner__arrow--right">
+          <div className="spinner">
+            <div
+              className="spinner__images"
+              style={{
+                left: `${this.state.spinnerPosition}px`,
+              }}
+            >
+              {imageList.map(imageObj => (
+                <img
+                  // alt tags should be defined
+                  alt=""
+                  className={`thumbnail ${this.state.highlightedImage === imageObj.image ? 'selected' : ''}`}
+                  key={imageObj.image}
+                  onClick={() => this.setHighlightedImage(imageObj.image)}
+                  src={imageObj.image}
+                />
+              ))}
+            </div>
+          </div>
+          <div
+            className={`arrow arrow--right ${this.state.spinnerPosition <= -(this.props.imageList.length * 74) + 222 ? 'hidden' : ''}`}
+            onClick={() => this.slideRight()}
+          >
             <span>&rsaquo;</span>
           </div>
         </div>
@@ -51,7 +82,7 @@ Carousel.propTypes = {
 };
 
 Carousel.defaultProps = {
-  images: [],
+  imageList: [],
 };
 
 export default Carousel;
