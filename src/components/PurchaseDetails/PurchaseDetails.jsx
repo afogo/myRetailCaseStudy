@@ -4,6 +4,9 @@ import './PurchaseDetails.css';
 import Promotions from '../Promotions';
 import Quantity from '../Quantity';
 
+import PurchaseButtons from '../PurchaseButtons';
+import ReturnPolicy from '../ReturnPolicy';
+
 const PurchaseDetails = (props) => {
   const {
     price,
@@ -18,6 +21,8 @@ const PurchaseDetails = (props) => {
       </div>
       <Promotions />
       <Quantity />
+      <PurchaseButtons />
+      <ReturnPolicy />
     </div>
   );
 };

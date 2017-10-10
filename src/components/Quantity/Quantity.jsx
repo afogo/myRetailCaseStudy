@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './Quantity.css';
 
 class Quantity extends Component {
@@ -10,36 +9,42 @@ class Quantity extends Component {
     };
   }
 
+  decrement() {
+    if (this.state.quantity > 0) {
+      this.setState(prevState => ({ quantity: prevState.quantity - 1 }));
+    }
+  }
+
+  increment() {
+    this.setState(prevState => ({ quantity: prevState.quantity + 1 }));
+  }
+
   render() {
     return (
-      <div className="quantity-selector">
-        <div className="quantity-selector__label">
-          <span>quantity:</span>
-        </div>
-        <div className="quantity-selector__controls">
-          <button
-            className="decrement"
-          >
-            <i className="fa fa-minus-circle" aria-hidden="true" />
-          </button>
-          <span className="amount">{this.state.quantity}</span>
-          <button className="increment">
-            <i className="fa fa-plus-circle" aria-hidden="true" />
-          </button>
+      <div className="quantity">
+        <div className="quantity-selector">
+          <div className="quantity-selector__label">
+            <span>quantity:</span>
+          </div>
+          <div className="quantity-selector__controls">
+            <button
+              className="decrement"
+              onClick={() => this.decrement()}
+            >
+              <i className="fa fa-minus-circle" aria-hidden="true" />
+            </button>
+            <span className="amount">{this.state.quantity}</span>
+            <button
+              className="increment"
+              onClick={() => this.increment()}
+            >
+              <i className="fa fa-plus-circle" aria-hidden="true" />
+            </button>
+          </div>
         </div>
       </div>
     );
   }
 }
-
-Quantity.propTypes = {
-  price: PropTypes.string,
-  qualifier: PropTypes.string,
-};
-
-Quantity.defaultProps = {
-  price: '',
-  qualifier: '',
-};
 
 export default Quantity;

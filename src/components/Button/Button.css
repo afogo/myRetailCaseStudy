@@ -1,0 +1,33 @@
+.purchase-button {
+  background: #000000;
+  background: -moz-linear-gradient(top, #4c4c4c 0%, #666666 5%, #474747 11%, #000000 24%, #131313 100%);
+  background: -webkit-linear-gradient(top, #4c4c4c 0%,#666666 5%,#474747 11%,#000000 24%,#131313 100%);
+  background: linear-gradient(to bottom, #4c4c4c 0%,#666666 5%,#474747 11%,#000000 24%,#131313 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 );
+
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(102,102,102,1);
+  -moz-box-shadow: 0px 3px 4px 0px rgba(102,102,102,1);
+  box-shadow: 0px 3px 4px 0px rgba(102,102,102,1);
+
+  border: 1px solid #000000;
+  border-radius: 3px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 300;
+  outline: inherit;
+  padding: 12px 0;
+  width: 240px;
+}
+
+.purchase-button.primary {
+  background: #cc0000;
+  background: -moz-linear-gradient(top, #cccccc 0%, #cc7878 5%, #cc5D5D 11%, #cc0000 24%, #cc2222 100%);
+  background: -webkit-linear-gradient(top, #cccccc 0%,#cc7878 5%,#cc5D5D 11%,#cc0000 24%,#cc2222 100%);
+  background: linear-gradient(to bottom, #ccccccc 0%,#cc7878 5%,#cc5D5D 11%,#cc0000 24%,#cc2222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#cc2222',GradientType=0 );
+
+  border-color: #cc0000
+}
